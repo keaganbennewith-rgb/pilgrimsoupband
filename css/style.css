@@ -7,6 +7,7 @@
     --color-primary: #E10600;
     /* Striking Pilgrim Soup Red */
     --color-primary-hover: #b30000;
+    --color-primary-text: #ff6b66;
     --color-black: #000000;
     --color-white: #FFFFFF;
     --color-dark-grey: #111111;
@@ -598,7 +599,7 @@ img {
 .contact-link {
     font-size: 1.15rem;
     font-family: var(--font-body);
-    color: var(--color-primary);
+    color: var(--color-primary-text);
     text-decoration: none;
     line-height: 1.4;
     transition: opacity 0.2s ease;
@@ -649,7 +650,7 @@ img {
 }
 
 .footer-brand p {
-    color: #666;
+    color: #999;
     font-size: 0.9rem;
 }
 
