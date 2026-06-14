@@ -20,6 +20,19 @@ test('primary booking journey is visible', async ({ page }) => {
   await expect(page.getByText('Keagan Bennewith')).toBeVisible();
 });
 
+test('promoter EPK route has booking assets and source-backed proof', async ({ page }) => {
+  await page.goto('/epk.html');
+
+  await expect(page).toHaveTitle(/Pilgrim Soup EPK/);
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://pilgrimsoupband.co.za/epk.html');
+  await expect(page.getByRole('heading', { name: 'Pilgrim Soup', exact: true }).first()).toBeVisible();
+  await expect(page.getByText('Durban rap-rock / alternative hip-hop')).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Tech rider' }).first()).toHaveAttribute('href', /PILGRIM%20SOUP%20tech%20rider\.pdf/);
+  await expect(page.getByRole('link', { name: 'Press photos' })).toHaveAttribute('href', /drive\.google\.com/);
+  await expect(page.getByText('Splashy Fen 2026', { exact: true })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'bookings@pilgrimsoupband.co.za' })).toHaveAttribute('href', 'mailto:bookings@pilgrimsoupband.co.za');
+});
+
 test('mobile navigation opens and closes', async ({ page, isMobile }) => {
   test.skip(!isMobile, 'mobile-only behavior');
 
