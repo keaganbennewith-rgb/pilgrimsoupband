@@ -13,7 +13,8 @@
         content="Pilgrim Soup, rap rock, alternative band, South African band, Durban music, hip hop rock">
     <meta name="author" content="Pilgrim Soup">
     <link rel="canonical" href="https://pilgrimsoupband.co.za/">
-    <link rel="icon" href="assets/logo%201.png" type="image/png">
+    <link rel="icon" href="assets/generated/favicon.png" type="image/png">
+    <link rel="preload" as="image" href="assets/generated/press-4-hero.webp" fetchpriority="high">
 
     <!-- OpenGraph Tags -->
     <meta property="og:title" content="Pilgrim Soup | Official Website">
@@ -116,15 +117,13 @@
                     <!-- Title on top -->
                     <h3 class="track-title" style="margin: 0 0 1.5rem 0; font-size: clamp(1.5rem, 3vw, 2.25rem);">Circle Live - Pilgrim Soup UNCUT</h3>
 
-                    <!-- YouTube video embed: big, centered, responsive 16:9 (autoplay muted, click to unmute) -->
-                    <div class="video-embed-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; width: 100%; max-width: 1100px; margin: 0 auto 2rem auto; box-shadow: 0 20px 60px rgba(0,0,0,0.4);">
-                        <iframe
-                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-                            src="https://www.youtube.com/embed/5qnYm7upni8?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1"
-                            title="Circle Live - Pilgrim Soup UNCUT"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen></iframe>
+                    <div class="video-embed-wrapper">
+                        <a href="https://youtu.be/5qnYm7upni8" target="_blank" rel="noopener" class="video-poster-link"
+                            aria-label="Watch Circle Live - Pilgrim Soup UNCUT on YouTube">
+                            <img src="assets/generated/band-video-poster.webp" alt="Pilgrim Soup live video preview"
+                                loading="lazy" decoding="async">
+                            <span class="video-play-badge">WATCH ON YOUTUBE</span>
+                        </a>
                         <div class="sticker-graphic" style="z-index: 2;">NEW</div>
                     </div>
 
@@ -180,7 +179,7 @@
                 </div>
                 <div class="about-visual">
                     <div class="image-frame">
-                        <img src="assets/band-web.jpg" alt="Pilgrim Soup - Band Members" loading="lazy">
+                        <img src="assets/generated/band-about.webp" alt="Pilgrim Soup - Band Members" loading="lazy">
                         <div class="soup-icon-minimal"></div>
                     </div>
                 </div>
