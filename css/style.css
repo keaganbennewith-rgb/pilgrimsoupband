@@ -7,6 +7,7 @@
     --color-primary: #E10600;
     /* Striking Pilgrim Soup Red */
     --color-primary-hover: #b30000;
+    --color-primary-text: #ff6b66;
     --color-black: #000000;
     --color-white: #FFFFFF;
     --color-dark-grey: #111111;
@@ -306,7 +307,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../assets/press-4-web.jpg') center/cover no-repeat;
+    background: url('../assets/generated/press-4-hero.webp') center/cover no-repeat;
     z-index: 1;
 }
 
@@ -444,6 +445,55 @@ img {
     border-radius: 50%;
     transform: rotate(15deg);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.video-embed-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 2rem auto;
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.video-poster-link {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: var(--color-white);
+}
+
+.video-poster-link img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.55);
+    transition: transform var(--transition-smooth), filter var(--transition-smooth);
+}
+
+.video-poster-link:hover img {
+    transform: scale(1.03);
+    filter: brightness(0.7);
+}
+
+.video-play-badge {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.6rem;
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    clip-path: polygon(4% 0, 100% 0, 96% 100%, 0% 100%);
 }
 
 .music-info {
@@ -598,7 +648,7 @@ img {
 .contact-link {
     font-size: 1.15rem;
     font-family: var(--font-body);
-    color: var(--color-primary);
+    color: var(--color-primary-text);
     text-decoration: none;
     line-height: 1.4;
     transition: opacity 0.2s ease;
@@ -627,6 +677,186 @@ img {
 }
 
 /* -------------------------------------
+   EPK PAGE
+---------------------------------------- */
+.epk-hero {
+    position: relative;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: calc(var(--nav-height) + 3rem) var(--spacing-sm) 4rem;
+}
+
+.epk-hero-content {
+    position: relative;
+    z-index: 3;
+    width: min(980px, 100%);
+    margin: 0 auto;
+}
+
+.eyebrow {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    color: var(--color-primary-text);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+}
+
+.epk-hero h1 {
+    font-size: clamp(4rem, 12vw, 9rem);
+    font-weight: 900;
+    line-height: 0.85;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.epk-lead {
+    max-width: 760px;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    color: var(--color-white);
+    line-height: 1.35;
+}
+
+.epk-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.epk-band {
+    background: var(--color-black);
+    border-top: 1px solid var(--color-light-grey);
+    border-bottom: 1px solid var(--color-light-grey);
+    padding: 3rem 0;
+}
+
+.epk-band-grid,
+.epk-two-column,
+.booking-slab {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.epk-panel {
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.epk-summary p,
+.epk-panel p {
+    margin-top: 1rem;
+}
+
+.epk-proof-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.proof-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 125px;
+    padding: 1.4rem;
+    background: var(--color-dark-grey);
+    border-left: 5px solid var(--color-primary);
+}
+
+.proof-card span,
+.asset-card span,
+.show-row span {
+    color: #aaa;
+    font-size: 0.8rem;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.proof-card strong {
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+.epk-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-left: 1.2rem;
+}
+
+.asset-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.asset-card {
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--color-mid-grey);
+    border: 1px solid var(--color-light-grey);
+    border-radius: 8px;
+}
+
+.asset-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+}
+
+.asset-card h3 {
+    font-size: 1.4rem;
+}
+
+.asset-card p {
+    color: #b8b8b8;
+}
+
+.show-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-light-grey);
+}
+
+.show-row strong {
+    color: var(--color-white);
+}
+
+.show-row.past {
+    opacity: 0.78;
+}
+
+.booking-slab {
+    align-items: center;
+}
+
+.booking-slab h2 {
+    font-size: clamp(2.2rem, 5vw, 5rem);
+    max-width: 760px;
+}
+
+.booking-slab p {
+    max-width: 640px;
+    margin-top: 1rem;
+}
+
+/* -------------------------------------
    FOOTER
 ---------------------------------------- */
 .footer {
@@ -649,7 +879,7 @@ img {
 }
 
 .footer-brand p {
-    color: #666;
+    color: #999;
     font-size: 0.9rem;
 }
 
@@ -688,7 +918,10 @@ img {
 
     .music-card,
     .about-container,
-    .contact-wrapper {
+    .contact-wrapper,
+    .epk-band-grid,
+    .epk-two-column,
+    .booking-slab {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
@@ -751,7 +984,12 @@ img {
         gap: 1rem;
     }
 
-    .hero-actions .btn {
+    .epk-hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-actions .btn,
+    .epk-hero-actions .btn {
         width: 100%;
     }
 
@@ -789,6 +1027,15 @@ img {
 
     .contact-info {
         gap: 0.5rem;
+    }
+
+    .epk-proof-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .show-row {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
     }
 
     .footer-container {

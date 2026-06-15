@@ -12,6 +12,9 @@
     <meta name="keywords"
         content="Pilgrim Soup, rap rock, alternative band, South African band, Durban music, hip hop rock">
     <meta name="author" content="Pilgrim Soup">
+    <link rel="canonical" href="https://pilgrimsoupband.co.za/">
+    <link rel="icon" href="assets/generated/favicon.png" type="image/png">
+    <link rel="preload" as="image" href="assets/generated/press-4-hero.webp" fetchpriority="high">
 
     <!-- OpenGraph Tags -->
     <meta property="og:title" content="Pilgrim Soup | Official Website">
@@ -30,6 +33,38 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "@id": "https://pilgrimsoupband.co.za/#band",
+        "name": "Pilgrim Soup",
+        "url": "https://pilgrimsoupband.co.za/",
+        "image": "https://pilgrimsoupband.co.za/assets/press-4-web.jpg",
+        "logo": "https://pilgrimsoupband.co.za/assets/logo%201.png",
+        "description": "Pilgrim Soup is a Durban-based rap-rock band blending hip-hop grooves, alternative rock energy, and festival-ready hooks.",
+        "foundingDate": "2011",
+        "foundingLocation": {
+            "@type": "Place",
+            "name": "Durban, KwaZulu-Natal, South Africa"
+        },
+        "genre": [
+            "Rap rock",
+            "Alternative rock",
+            "Hip-hop"
+        ],
+        "email": "bookings@pilgrimsoupband.co.za",
+        "telephone": "+27659536931",
+        "sameAs": [
+            "https://open.spotify.com/artist/3D2l2RN4Glk5Uu5scI9him",
+            "https://music.apple.com/us/artist/pilgrim-soup/1848967185",
+            "https://www.youtube.com/@PilgrimSoupband",
+            "https://www.instagram.com/pilgrim_soup/",
+            "https://www.tiktok.com/@pilgrim_soup"
+        ]
+    }
+    </script>
 </head>
 
 <body>
@@ -46,6 +81,7 @@
                 <a href="#hero" class="nav-link">Home</a>
                 <a href="#music" class="nav-link">Music</a>
                 <a href="#about" class="nav-link">About</a>
+                <a href="epk.html" class="nav-link">EPK</a>
                 <a href="#media-kit" class="nav-link">Media Kit</a>
                 <a href="#bookings" class="nav-link">Bookings</a>
             </nav>
@@ -67,6 +103,7 @@
                     <a href="https://youtu.be/5qnYm7upni8" target="_blank" rel="noopener noreferrer"
                         class="btn btn-primary">LISTEN NOW</a>
                     <a href="#bookings" class="btn btn-primary">BOOK THE BAND</a>
+                    <a href="epk.html" class="btn btn-secondary">VIEW EPK</a>
                 </div>
             </div>
             <div class="graphic-element steam-lines" aria-hidden="true"></div>
@@ -82,15 +119,13 @@
                     <!-- Title on top -->
                     <h3 class="track-title" style="margin: 0 0 1.5rem 0; font-size: clamp(1.5rem, 3vw, 2.25rem);">Circle Live - Pilgrim Soup UNCUT</h3>
 
-                    <!-- YouTube video embed: big, centered, responsive 16:9 (autoplay muted, click to unmute) -->
-                    <div class="video-embed-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; width: 100%; max-width: 1100px; margin: 0 auto 2rem auto; box-shadow: 0 20px 60px rgba(0,0,0,0.4);">
-                        <iframe
-                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-                            src="https://www.youtube.com/embed/5qnYm7upni8?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1"
-                            title="Circle Live - Pilgrim Soup UNCUT"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen></iframe>
+                    <div class="video-embed-wrapper">
+                        <a href="https://youtu.be/5qnYm7upni8" target="_blank" rel="noopener" class="video-poster-link"
+                            aria-label="Watch Circle Live - Pilgrim Soup UNCUT on YouTube">
+                            <img src="assets/generated/band-video-poster.webp" alt="Pilgrim Soup live video preview"
+                                loading="lazy" decoding="async">
+                            <span class="video-play-badge">WATCH ON YOUTUBE</span>
+                        </a>
                         <div class="sticker-graphic" style="z-index: 2;">NEW</div>
                     </div>
 
@@ -146,7 +181,7 @@
                 </div>
                 <div class="about-visual">
                     <div class="image-frame">
-                        <img src="assets/band-web.jpg" alt="Pilgrim Soup - Band Members" loading="lazy">
+                        <img src="assets/generated/band-about.webp" alt="Pilgrim Soup - Band Members" loading="lazy">
                         <div class="soup-icon-minimal"></div>
                     </div>
                 </div>
@@ -162,6 +197,11 @@
                 </div>
 
                 <div class="media-kit-grid">
+                    <a href="epk.html" class="media-card">
+                        <div class="media-icon">⚡</div>
+                        <h3>Promoter EPK</h3>
+                        <span>Live proof + booking assets</span>
+                    </a>
                     <a href="https://drive.google.com/drive/folders/17NIdARmBY8ZxO3OvEx_EZPsHQkFe7GDp?usp=sharing" class="media-card" target="_blank" rel="noopener">
                         <div class="media-icon">📷</div>
                         <h3>Press Photos</h3>
@@ -195,7 +235,7 @@
                 <div class="contact-wrapper">
                     <div class="contact-card">
                         <p class="contact-name">Keagan Bennewith</p>
-                        <a href="mailto:reverberatestudios@gmail.com" class="contact-link">reverberatestudios@gmail.com</a>
+                        <a href="mailto:bookings@pilgrimsoupband.co.za" class="contact-link">bookings@pilgrimsoupband.co.za</a>
                         <a href="tel:+27659536931" class="contact-link">+27 65 953 6931</a>
                     </div>
                 </div>
